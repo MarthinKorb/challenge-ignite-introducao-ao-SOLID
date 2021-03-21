@@ -41,7 +41,9 @@ class UsersRepository implements IUsersRepository {
   }
 
   turnAdmin(receivedUser: User): User {
-    return;
+    receivedUser.admin = true;
+
+    return receivedUser;
   }
 
   list(): User[] {
